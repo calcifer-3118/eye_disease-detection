@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Object Detection</title>
+    <title>Eye Disease Detection</title>
 </head>
 <body>
 
-    <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
-    <img id="display-image"></img>
+    <div class="container">
 
-    <button class="predict" onclick="predict()"> Predict </button>
+        <div class="img-container">
+            <img id="display-image" src="../static/test_data/test/normal/NL_039.png"></img>
+            <input type="file" id="image-input" accept="image/jpeg, image/png, image/jpg">
+        </div>
+
+        <button class="predict" onclick="predict()"  style="display:none ;"> Predict </button>
+
+    </div>
+
+
     
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
 
